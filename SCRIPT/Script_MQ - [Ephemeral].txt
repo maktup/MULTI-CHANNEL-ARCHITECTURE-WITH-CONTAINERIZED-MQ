@@ -1,0 +1,142 @@
+
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+metadata:
+  name: ins-mq-001
+  namespace: cp4i
+spec:
+  license:
+    accept: true
+    license: L-RJON-CJR2RX
+    use: NonProduction
+  web:
+    enabled: true
+  securityContext:
+    supplementalGroups:
+      - 99
+  version: 9.3.2.1-r1
+  template:
+    pod:
+      containers:
+        - env:
+            - name: MQM.1
+              value: 'yes'
+          name: qmgr
+  queueManager:
+    resources:
+      limits:
+        cpu: 500m
+      requests:
+        cpu: 500m
+    name: MQM.1
+    storage:
+      queueManager:
+        type: ephemeral
+ 
+        
+---
+
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+metadata:
+  name: ins-mq-002
+  namespace: cp4i
+spec:
+  license:
+    accept: true
+    license: L-RJON-CJR2RX
+    use: NonProduction
+  web:
+    enabled: true
+  securityContext:
+    supplementalGroups:
+      - 99
+  version: 9.3.2.1-r1
+  template:
+    pod:
+      containers:
+        - env:
+            - name: MQM.2
+              value: 'yes'
+          name: qmgr
+  queueManager:
+    resources:
+      limits:
+        cpu: 500m
+      requests:
+        cpu: 500m
+    name: MQM.2
+    storage:
+      queueManager:
+        type: ephemeral
+
+---
+
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+metadata:
+  name: ins-mq-003
+  namespace: cp4i
+spec:
+  license:
+    accept: true
+    license: L-RJON-CJR2RX
+    use: NonProduction
+  web:
+    enabled: true
+  securityContext:
+    supplementalGroups:
+      - 99
+  version: 9.3.2.1-r1
+  template:
+    pod:
+      containers:
+        - env:
+            - name: MQM.3
+              value: 'yes'
+          name: qmgr
+  queueManager:
+    resources:
+      limits:
+        cpu: 500m
+      requests:
+        cpu: 500m
+    name: MQM.3
+    storage:
+      queueManager:
+        type: ephemeral
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: srv-nodeport-mqm-server
+  namespace: cp4i
+spec:
+  type: NodePort
+  ports:
+    - name: mq-nodeport
+      port: 1414
+      nodePort: 31414
+  selector:
+    app.kubernetes.io/component: integration
+    app.kubernetes.io/instance: ins-mq-001
+    app.kubernetes.io/managed-by: operator
+    app.kubernetes.io/name: ibm-mq
+ 
+---
+
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: srv-nodeport-mqm-server
+  namespace: cp4i
+spec:
+  to:
+    kind: Service
+    name: srv-nodeport-mqm-server
+  port:
+    targetPort: 31414
+
+

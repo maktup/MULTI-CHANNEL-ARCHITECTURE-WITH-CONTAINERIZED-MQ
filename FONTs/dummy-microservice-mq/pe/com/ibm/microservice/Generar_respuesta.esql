@@ -1,0 +1,16 @@
+BROKER SCHEMA pe.com.ibm.microservice
+
+CREATE COMPUTE MODULE Generar_respuesta
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	
+	BEGIN		
+		 --ELIMINANDO OutputRoot de: XMLNSC 
+	 	 DELETE FIELD OutputRoot.JSON.Data.cliente; 
+		
+		 SET OutputRoot.JSON.Data.Auditoria.id = '0';
+		 SET OutputRoot.JSON.Data.Auditoria.detalle = 'Registro Exitoso';
+		
+		 RETURN TRUE;
+	END;
+ 
+END MODULE;

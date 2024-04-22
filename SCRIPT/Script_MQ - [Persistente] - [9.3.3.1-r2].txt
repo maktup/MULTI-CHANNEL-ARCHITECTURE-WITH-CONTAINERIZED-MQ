@@ -1,0 +1,123 @@
+
+kind: Secret
+apiVersion: v1
+metadata:
+  name: tls-secret-mqm
+  namespace: cp4i-crga
+  
+data:
+  tls.crt: >-
+    LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURxVENDQXBHZ0F3SUJBZ0lVT1NXOUNwVkFlTmIvSGlVa1dmdllrVWxtM1Jrd0RRWUpLb1pJaHZjTkFRRUwKQlFBd1R6RUxNQWtHQTFVRUJoTUNVRVV4RFRBTEJnTlZCQWdNQkV4SlRVRXhEVEFMQmdOVkJBY01CRXhKVFVFeApEREFLQmdOVkJBb01BMFJwY3pFVU1CSUdBMVVFQXd3TGQzZDNMbWxpYlM1amIyMHdIaGNOTWpJd05UQTBNVGd3Ck16QTVXaGNOTWpNd09URTJNVGd3TXpBNVdqQlBNUXN3Q1FZRFZRUUdFd0pRUlRFTk1Bc0dBMVVFQ0F3RVRFbE4KUVRFTk1Bc0dBMVVFQnd3RVRFbE5RVEVNTUFvR0ExVUVDZ3dEUkdsek1SUXdFZ1lEVlFRRERBdDNkM2N1YVdKdApMbU52YlRDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBT0ZESGZWempyNnE4OGV3CnNmc2I1akJwcXRROUNvd1dNQUZLdlIyczBwY3ptbVY3L216dmdwd0Ivcm9BeVZUNVZoTTA3RUQzZ1RXTVZXQzUKV2xXQ2VlVWZIRi9rRWF2eDNwL3Q0Qi80V2ZQSEh2SGYvZWNvWExyUXdqM0g2WThiQkN6RHp2dS94QVZ3bTZyNwpwdy8wdURxN0F3UGVERWhFbWVaQ0hoWDNQU3lSeGRXaFh3b0J4ajhSa01uQmswcU5pMlFlM0w3YU1QZGxOd0ttCm9tVHlROUsvZWV4MzR1QUk1SVhrWjFGWHlGYnpWV0pqbGpSM1hrZGtmeGdTaFJOQ0N6bEZNS1U4MS9YTDR0SmwKSFArWkJIMTM1UmxsU0Mvc3Nnc1dRM0ZJb2xaV3A2cFJiVXg5YTdNWHIvNkhQcVRnVjF4dU5NU05hQm1CbzFybQpwdTM2OTRFQ0F3RUFBYU45TUhzd0h3WURWUjBqQkJnd0ZvQVVMZThlNFlQWVA0aWRSRHE2bGYzM1dNaFQ5U0F3CkNRWURWUjBUQkFJd0FEQUxCZ05WSFE4RUJBTUNCUEF3SVFZRFZSMFJCQm93R0lJT0tpNW1lWEpsTG1saWJTNWoKYjIyQ0FJSUVMbU52YlRBZEJnTlZIUTRFRmdRVWl0T2V4bGY0eDBKZURXMzBOaUZpYWZqUXh6TXdEUVlKS29aSQpodmNOQVFFTEJRQURnZ0VCQUlmeHYzc1NFNVBBQk5XS0d1STFHWE1lZ1RqQUp6eWZudjQvSGQ4bFk5RFlNY1FrCjJvNnc2UTlTWFJJNmlwcVZMK2JPMm84YzdNSVNFQlhmdUkvSC9OQnh3MmxzVFFvYUxWajA0VzVobHpqUkhISVgKMTZIUitCcG1pRXBRQlR6RVg2TkdtUTgwVE0wR3EwWTIvdXlROFZGYUI1Rm9oU1FJNUs4YW1pNUFzNEFvb0VlOQp6clN0S2k1YWNRSWtrSFVzWkdJQ1RxS3JZaVlkN1Vrb2VyQ2QrYy9lb3BuMVRtRFYzNkRJV1VLVmd6MEVGYWxxCnRFR05OVGhuZG5ubVJOUG1HZlJ0ckhaeVFMNjNHZllxcHB3eUFnWjZBSW5laDJYM2VjaWJSRTkreFB4eDlaMXUKQ3cyZXZHRndVVzRlU1VyZHVUVEgzTUxhMENZSkJQRW9QVDFnZVdzPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0t
+  tls.key: >-
+    LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2Z0lCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktnd2dnU2tBZ0VBQW9JQkFRRGhReDMxYzQ2K3F2UEgKc0xIN0crWXdhYXJVUFFxTUZqQUJTcjBkck5LWE01cGxlLzVzNzRLY0FmNjZBTWxVK1ZZVE5PeEE5NEUxakZWZwp1VnBWZ25ubEh4eGY1QkdyOGQ2ZjdlQWYrRm56eHg3eDMvM25LRnk2ME1JOXgrbVBHd1Fzdzg3N3Y4UUZjSnVxCis2Y1A5TGc2dXdNRDNneElSSm5tUWg0Vjl6MHNrY1hWb1Y4S0FjWS9FWkRKd1pOS2pZdGtIdHkrMmpEM1pUY0MKcHFKazhrUFN2M25zZCtMZ0NPU0Y1R2RSVjhoVzgxVmlZNVkwZDE1SFpIOFlFb1VUUWdzNVJUQ2xQTmYxeStMUwpaUnovbVFSOWQrVVpaVWd2N0xJTEZrTnhTS0pXVnFlcVVXMU1mV3V6RjYvK2h6Nms0RmRjYmpURWpXZ1pnYU5hCjVxYnQrdmVCQWdNQkFBRUNnZ0VBSlBPeG5SWVJFSGluOTRDbUhFblRWT3NWNUMydk8ra0NoRWtTV2lVdUs5elgKTXdGSUYwUDRQNXlaZ0piOXhUd0c3QUpUenhuS3p2eWFTaWVkczBhWUN3Y3pkd3pKVS85MVJFbVg2U2FxK3R2QQpnOFQ1WXZZSUNzMDcrbzUvWXhqM2Nsc2NsUnptdHZobCs0SnA3QUFrOHpMQ1VvYkEvN1NMMm0zTGZ2eEpHTFR5CkVVK3J4OWlQTUxuN2dIcUMySFd5Z3NkNWRXQVNDUGRkQk1OQS9pMUFZTlZPSmtVMTdSVjZHNzNTZFIyckhGMnoKeGIwcU85clBJMjNaVmVsYzdwbDc4RFFqdE9UU0oxc0lQZ3FoZE5kR3IyYUFVZmdqcDBoYUxzQWR5M0FsNTZHRQo2N2d1Y05DWjFjcXp3NkNISXk4UlRvbFlzY0lCTXpiTWRTclBPZHpSa1FLQmdRRCt2L3JVdnhzTW1QSG5VZWloCjBmUXBNTjVWWmUxOVZuT3Zwd25tbGo2S1JudlFkcSswWDFuVVB0bGNZR2FtdWxqMmZJZEJmZ2ZpQzJqM0t6ZFUKUEFSN1M3a1A5R200TWVzdUkvV1hha2RySzN0VTlHaFA2L1dUbWtYRVpxaE55THBzVXVvVDNsNElUc1VWYU8ydQo1VlZRWWMxOHRlQ3hqU2hySEMzL1BCQUdXd0tCZ1FEaVhoZ2x1RjM0SWswM3ZxSTQ3dHJZUkZtS3daRmUvWVpiCmFiUG1xdVhzbFg3RjJzczVsNThjMGt6Vy9lU1ZyRVNrZWJLczlBbVBZOFlEbU5oVVBpNEtJQWNwTlBTY2VZMzUKbGNMUVhmWUxGSVdxaEhzclJRdHZqUzBJMExNb1pPdW9OdDJSQ0VxaDBhQUJSWlU5dnJKaXNyOEcyYTdsbXJzMQpPc1VmbVQ4NFV3S0JnUURxYkpmUnRwcVptUlRpSFFuSi8zNkRlU2pmeFJBcVNxZmllQUF3WlFuZ0RNUmJMUnk3CkN4T0tzTnNzbXJsYnJCZTVteGFNT2dIZkRVam1TcXA3cFU4cWRxQXlBbVJXei9qdldML2pPalhHZFJqbE1KUGQKRi9IQWhqSzFiUkpyb2MrTFp6Rm9YelNBeUp1ci9BYmM3c1QzVjBqVS9qbHFxYzhMNGI2aUpROUtDUUtCZ0Q1cgpBYStNK2VSTTJRdnc5ZHhMQ0c4djBaendLUHlQWGJmaEdxa1ZJSmN1MWFrSzNwUy8yVERpVUN2TUVIYXc3TENKCm1ob1VwSG8wWWNwbUgraUN5TUVqK2JXRUU1cjk3WWNQbzRzL0RYUWFzWXpHUVF3NldwL2t4ckV5a3VRbGg5RjMKWjNyeFZWcnZhWFpRVUltWkJxa3VibndlRkJyZG9wZFg0RGtKVWFSZkFvR0JBTitHd3V3NCtFeWswenZ6OGhxOQphSmtKYW1GWUFlWHNGckl0MmxtRmxPR2YwekhCV0JUdm4yaTJ0cmF3ZisydDV0VFgvc3BqK0N1eWNjYVNHRnNWCmNvT21aY2pwNC9TdFZZZkRJT0cycDRYK24zTU11UDZBU05WYllrUms1T3g2YUNSMWVLR1lNZjNMbjJxSUpiVXIKalRWcVVWeVZOZzJHVjZBZ0J1dWk0NkZWCi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0=
+type: Opaque
+
+---
+
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+metadata:
+  name: ins-mq-001
+  annotations:
+    com.ibm.mq/write-defaults-spec: 'false'
+  namespace: cp4i-crga
+spec:
+  license:
+    accept: true
+    license: L-YBXJ-ADJNSM
+    use: NonProduction
+  web:
+    enabled: true
+  template:
+    pod:
+      containers:
+        - env:
+            - name: MQM.1
+              value: 'yes'
+          name: qmgr
+  queueManager:
+    resources:
+      limits:
+        cpu: 500m
+      requests:
+        cpu: 500m
+    storage:
+      queueManager:
+        type: persistent-claim
+      defaultClass: ocs-storagecluster-cephfs
+    name: MQM.1
+  version: 9.3.3.0-r1
+    
+--- 
+
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+metadata:
+  name: ins-mq-002
+  annotations:
+    com.ibm.mq/write-defaults-spec: 'false'
+  namespace: cp4i-crga
+spec:
+  license:
+    accept: true
+    license: L-YBXJ-ADJNSM
+    use: NonProduction
+  web:
+    enabled: true
+  template:
+    pod:
+      containers:
+        - env:
+            - name: MQM.2
+              value: 'yes'
+          name: qmgr
+  queueManager:
+    resources:
+      limits:
+        cpu: 500m
+      requests:
+        cpu: 500m
+    storage:
+      queueManager:
+        type: persistent-claim
+      defaultClass: ocs-storagecluster-cephfs
+    name: MQM.2
+  version: 9.3.3.0-r1
+    
+--- 
+
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+metadata:
+  name: ins-mq-003
+  annotations:
+    com.ibm.mq/write-defaults-spec: 'false'
+  namespace: cp4i-crga
+spec:
+  license:
+    accept: true
+    license: L-YBXJ-ADJNSM
+    use: NonProduction
+  web:
+    enabled: true
+  template:
+    pod:
+      containers:
+        - env:
+            - name: MQM.3
+              value: 'yes'
+          name: qmgr
+  queueManager:
+    resources:
+      limits:
+        cpu: 500m
+      requests:
+        cpu: 500m
+    storage:
+      queueManager:
+        type: persistent-claim
+      defaultClass: ocs-storagecluster-cephfs
+    name: MQM.3
+  version: 9.3.3.0-r1
+    
+          

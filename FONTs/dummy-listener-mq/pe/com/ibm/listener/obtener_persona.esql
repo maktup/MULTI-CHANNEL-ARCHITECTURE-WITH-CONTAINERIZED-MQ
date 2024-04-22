@@ -1,0 +1,36 @@
+BROKER SCHEMA pe.com.ibm.listener
+
+CREATE COMPUTE MODULE obtener_persona
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+/*
+{
+  "cliente": {
+    "idCli": "9",
+    "dniCli": "41816133",
+    "nombresCli": "Cesar Ricardo",
+    "apellidoMatCli": "Guerra",
+    "apellidoPatCli": "Arnaiz",
+    "tipoCli": "gold",
+    "correoCli": "cesarricardo.guerra19@gmail.com",
+    "generoCli": "masculino"
+  } 
+} 
+ */ 
+
+	BEGIN
+		 CREATE LASTCHILD OF OutputRoot DOMAIN( 'JSON' ) PARSE ( InputRoot.BLOB.BLOB CCSID 819 );  --Lo Transforma & manda al: OutputRoot.
+		
+         --GUARDAR en [Environment], para REUTILIZAR luego: 
+         SET Environment.EstructuraMQ.cliente.idCli          = OutputRoot.JSON.Data.cliente.idCli;               
+         SET Environment.EstructuraMQ.cliente.dniCli         = OutputRoot.JSON.Data.cliente.dniCli;              
+         SET Environment.EstructuraMQ.cliente.nombresCli     = OutputRoot.JSON.Data.cliente.nombresCli;   
+         SET Environment.EstructuraMQ.cliente.apellidoMatCli = OutputRoot.JSON.Data.cliente.apellidoMatCli;   
+         SET Environment.EstructuraMQ.cliente.apellidoPatCli = OutputRoot.JSON.Data.cliente.apellidoPatCli;   
+         SET Environment.EstructuraMQ.cliente.tipoCli        = OutputRoot.JSON.Data.cliente.tipoCli;   
+         SET Environment.EstructuraMQ.cliente.correoCli      = OutputRoot.JSON.Data.cliente.correoCli;   
+         SET Environment.EstructuraMQ.cliente.generoCli      = OutputRoot.JSON.Data.cliente.generoCli;   
+         
+		 RETURN TRUE;
+	END;
+ 
+END MODULE;

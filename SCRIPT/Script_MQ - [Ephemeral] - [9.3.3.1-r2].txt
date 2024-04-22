@@ -1,0 +1,99 @@
+
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+metadata:
+  name: ins-mq-001e
+  namespace: cp4i-crga
+spec:
+  license:
+    accept: true
+    license: L-YBXJ-ADJNSM
+    use: NonProduction
+  queueManager:
+    name: MQM.1
+    resources:
+      limits:
+        cpu: 500m
+      requests:
+        cpu: 500m
+    storage:
+      queueManager:
+        type: ephemeral
+  template:
+    pod:
+      containers:
+        - env:
+            - name: MQM.1
+              value: 'yes'
+          name: qmgr
+  version: 9.3.3.1-r2
+  web:
+    enabled: true
+    
+----------------------------------------------------
+
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+metadata:
+  name: ins-mq-002e
+  namespace: cp4i-crga
+spec:
+  license:
+    accept: true
+    license: L-YBXJ-ADJNSM
+    use: NonProduction
+  queueManager:
+    name: MQM.2
+    resources:
+      limits:
+        cpu: 500m
+      requests:
+        cpu: 500m
+    storage:
+      queueManager:
+        type: ephemeral
+  template:
+    pod:
+      containers:
+        - env:
+            - name: MQM.2
+              value: 'yes'
+          name: qmgr
+  version: 9.3.3.1-r2
+  web:
+    enabled: true
+    
+----------------------------------------------------
+
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+metadata:
+  name: ins-mq-003e
+  namespace: cp4i-crga
+spec:
+  license:
+    accept: true
+    license: L-YBXJ-ADJNSM
+    use: NonProduction
+  queueManager:
+    name: MQM.3
+    resources:
+      limits:
+        cpu: 500m
+      requests:
+        cpu: 500m
+    storage:
+      queueManager:
+        type: ephemeral
+  template:
+    pod:
+      containers:
+        - env:
+            - name: MQM.3
+              value: 'yes'
+          name: qmgr
+  version: 9.3.3.1-r2
+  web:
+    enabled: true
+    
+          

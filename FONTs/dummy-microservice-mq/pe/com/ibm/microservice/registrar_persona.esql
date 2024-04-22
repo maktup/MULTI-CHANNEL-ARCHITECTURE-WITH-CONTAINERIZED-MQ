@@ -1,0 +1,34 @@
+BROKER SCHEMA pe.com.ibm.microservice
+
+CREATE COMPUTE MODULE registrar_persona
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	
+	BEGIN
+/*
+{
+  "cliente": {
+    "idCli": "9",
+    "dniCli": "41816133",
+    "nombresCli": "Cesar Ricardo",
+    "apellidoMatCli": "Guerra",
+    "apellidoPatCli": "Arnaiz",
+    "tipoCli": "gold",
+    "correoCli": "cesarricardo.guerra19@gmail.com",
+    "generoCli": "masculino"
+  } 
+} 
+ */    
+        -- REGISTRAR ESTRUCTURA A GUARDAR:  	          
+        SET OutputRoot.JSON.Data.cliente.idCli          = '9';
+        SET OutputRoot.JSON.Data.cliente.dniCli         = '41816133';
+        SET OutputRoot.JSON.Data.cliente.nombresCli     = 'Cesar Ricardo';
+        SET OutputRoot.JSON.Data.cliente.apellidoMatCli = 'Guerra';
+        SET OutputRoot.JSON.Data.cliente.apellidoPatCli = 'Arnaiz';
+        SET OutputRoot.JSON.Data.cliente.tipoCli        = 'gold';
+        SET OutputRoot.JSON.Data.cliente.correoCli      = 'cesarricardo.guerra19@gmail.com';
+        SET OutputRoot.JSON.Data.cliente.generoCli      = 'masculino';
+ 
+		RETURN TRUE;
+	END;
+ 
+END MODULE;
